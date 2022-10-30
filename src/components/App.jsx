@@ -9,9 +9,6 @@ export function App() {
   const [bad, setBad] = useState(0);
   const [neutral, setNeutral] = useState(0);
 
-  const options = Object.keys({ good, neutral, bad });
-  console.log(options);
-
   const calcFeedbackValue = btnName => {
     if (btnName === 'good') {
       setGood(s => s + 1);
@@ -23,6 +20,7 @@ export function App() {
       setBad(s => s + 1);
     }
   };
+  const options = Object.keys({ good, neutral, bad });
 
   const total = good + bad + neutral;
 
